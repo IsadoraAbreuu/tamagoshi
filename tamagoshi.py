@@ -32,7 +32,7 @@ class Tamagoshi:
             print("Estou morrendo... AAAAAAAAH")
         elif (self.fome > 99) or (self.tedio > 99):
             self.saude = 0   
-            print("Seu bichinho morreu T_T")
+            print("Eu morri ;-;")
 
     #função que chamas os métodos essenciais
     def tempoPassando(self):
@@ -41,6 +41,32 @@ class Tamagoshi:
         self.tedio += 2.5
         self.fome += 5
 
+<<<<<<< HEAD
+
+
+#classe para Tamagoshi Gato
+class TamagoshiGato(Tamagoshi):
+    #atributos para Tamagoshi Gato
+    def __init__(self, nome):
+        super().__init__(nome) #puxa atributos da classe pai
+        self.energia = 100
+        self.limpeza = 0
+
+    #métodos para tamagoshi gato
+    def banho(self):
+        self.limpeza += 100
+        print(f"{self.nome} tomou banho e está cheiroso(a) limpinho(a) e divo(A) (ᵔ ͜ʖ ͡ᵔ)")
+
+    def arranharSofa(self):
+        self.energia -= 20
+        print(f"{self.nome} está arranhando TODO O SOFÁ ¯\_( ͡🔥 ͜ʖ ͡🔥)_/¯")
+
+    def comerRatoPodre(self):
+        self.fome -= 40
+        self.limpeza -= 30
+        print(f"que nojeira, {self.nome} está saciando a fome com ratos podres")   
+
+=======
 
 #classe para Tamagoshi Gato
 class TamagoshiGato(Tamagoshi):
@@ -51,16 +77,47 @@ class TamagoshiGato(Tamagoshi):
         self.banho = banho
 
     #m
+>>>>>>> a95d3c79530787a5ddfd3f702d42cf18a428ee90
 
 
 #classe para Tamagoshi Cachorro
 class TamagoshiCachorro(Tamagoshi):
     #atributos para Tamagoshi Cachorro
+<<<<<<< HEAD
+    def __init__(self, nome, ):
+        super().__init__(nome) #puxa atributos da classe pai
+        self.estahDormindo = False
+        self.acessorio = ["roupinha", "touquinha", "óculos escuros", "fraldas", "boné", "coleira com pingente fofo", "crocs"]
+
+    def soneca(self):
+        if self.estahDormindo:
+            print(f"{self.nome} já está dormindo, shhh")
+        else:
+            print(f"{self.nome} estava cansado e foi dar uma dormidinha")
+            self.estahDormindo = True
+
+    def estilo(self, acessorio):
+        if acessorio not in self.acessorios:
+            print(f"Não tem o acessório '{acessorio}'.")
+            return
+        self.acessorioAtual = acessorio
+        print(f"{self.nome} agora está usando {acessorio}!")
+        if self.fome > 80:
+           print(f"{self.nome} está com tanta fome que acabou comendo {self.acessorio}")
+
+    def pegarOsso(self):
+        print(f"{self.nome} está se preparando para ir pegar o osso...")
+    
+
+
+#def pegar osso
+=======
     def __init__(self, nome, passear, treinar):
         super().__init__(self, nome) #puxa atributos da classe pai
         self.passear = passear
         self.treinar = treinar
 
+>>>>>>> a95d3c79530787a5ddfd3f702d42cf18a428ee90
 
 #classe para Tamagoshi Passaro
 class TamagoshiPassaro(Tamagoshi):
@@ -70,12 +127,36 @@ class TamagoshiPassaro(Tamagoshi):
         self.assobio = assobio 
         self.plumagem = plumagem
     
+<<<<<<< HEAD
+    #métodos para tamagoshis pássaros
+    def assobiar(self):
+        print(f"O pássaro {self.nome} está assobiando! {self.assobio}")
+
+    def mudancaPlumagem(self):
+        if self.fome < 50:
+            self.plumagem = f"{self.plumagem} claro"
+            print(f"O pássaro {self.nome} está {self.plumagem} de TANTA fome (◎ ͜ʖ ͡◎) (pálido!!!)")
+    
+    def voar(self):
+        if self.idade > 18:
+            self.fome += 1
+            print(f"{self.nome} está voando livremente")
+        else:
+            print(f"{self.nome} está querendo voar mas ainda é novinho...")
+        
+=======
     def assobiar(self):
         print(f"O pássaro {self.nome} está assobiando! {self.assobio}")
     
+>>>>>>> a95d3c79530787a5ddfd3f702d42cf18a428ee90
 
 
 
 passaro1 = TamagoshiPassaro("luli", "piu piu piuuuu", "roxa")
 
+<<<<<<< HEAD
+passaro1.mudancaPlumagem()
 passaro1.assobiar()
+=======
+passaro1.assobiar()
+>>>>>>> a95d3c79530787a5ddfd3f702d42cf18a428ee90
