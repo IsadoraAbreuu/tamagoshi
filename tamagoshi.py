@@ -1,3 +1,5 @@
+import time
+
 #classe Tamagoshi - classe pai
 class Tamagoshi:
     #atributos do Tamagoshi normal - padrão
@@ -43,7 +45,6 @@ class Tamagoshi:
 
 
 
-
 #classe para Tamagoshi Gato
 class TamagoshiGato(Tamagoshi):
     #atributos para Tamagoshi Gato
@@ -59,7 +60,7 @@ class TamagoshiGato(Tamagoshi):
 
     def arranharSofa(self):
         self.energia -= 20
-        print(f"{self.nome} está arranhando TODO O SOFÁ ¯\_( ͡🔥 ͜ʖ ͡🔥)_/¯")
+        print(f"{self.nome} está arranhando TODO O SOFÁ ( ͡🔥 ͜ʖ ͡🔥)")
 
     def comerRatoPodre(self):
         self.fome -= 40
@@ -68,15 +69,15 @@ class TamagoshiGato(Tamagoshi):
 
 
 
-
 #classe para Tamagoshi Cachorro
 class TamagoshiCachorro(Tamagoshi):
     #atributos para Tamagoshi Cachorro
-    def __init__(self, nome, ):
+    def __init__(self, nome, acessorio):
         super().__init__(nome) #puxa atributos da classe pai
         self.estahDormindo = False
         self.acessorio = ["roupinha", "touquinha", "óculos escuros", "fraldas", "boné", "coleira com pingente fofo", "crocs"]
 
+    #métodos para tamagoshi cachorro
     def soneca(self):
         if self.estahDormindo:
             print(f"{self.nome} já está dormindo, shhh")
@@ -84,7 +85,7 @@ class TamagoshiCachorro(Tamagoshi):
             print(f"{self.nome} estava cansado e foi dar uma dormidinha")
             self.estahDormindo = True
 
-    def estilo(self, acessorio):
+    def estilo(self):
         if acessorio not in self.acessorios:
             print(f"Não tem o acessório '{acessorio}'.")
             return
@@ -94,11 +95,26 @@ class TamagoshiCachorro(Tamagoshi):
            print(f"{self.nome} está com tanta fome que acabou comendo {self.acessorio}")
 
     def pegarOsso(self):
-        print(f"{self.nome} está se preparando para ir pegar o osso...")
+        if not self.estahDormindo and self.fome < 60:
+            print(f"{self.nome} está se preparando para ir pegar o osso...")
+            time.sleep(2)
+            print(f"{self.nome} saiu correndo igual doido atrás do osso omgggg")
+            time.sleep(3)
+            print(f"IHUUUUU {self.nome} pegou o osso!!!!")
+            time.sleep(2)
+            print(f"{self.nome} voltou com o osso todo bonitinho :)")
+            time.sleep(2)
+            self.fome -= 5
+            print("----------------------------------------------------")
+            continuarBrincando = input(f"Quer continuar brincando com {self.nome}?\n[1] SIMMMM\n[2] NÃO CANSEI\n")
+            if continuarBrincando == 1:
+                return pegarOsso
+            else:
+                print("Você parou de brincar")
+        else:
+            print(f"Tente brincar de buscar o osso outra hora, agora {self.nome} está sleepando ou com fome :/")
+
     
-
-
-#def pegar osso
 
 
 
@@ -118,7 +134,7 @@ class TamagoshiPassaro(Tamagoshi):
     def mudancaPlumagem(self):
         if self.fome < 50:
             self.plumagem = f"{self.plumagem} claro"
-            print(f"O pássaro {self.nome} está {self.plumagem} de TANTA fome (◎ ͜ʖ ͡◎) (pálido!!!)")
+            print(f"O pássaro {self.nome} está {self.plumagem} de TANTA fome (pálido!!!)")
     
     def voar(self):
         if self.idade > 18:
@@ -140,3 +156,14 @@ passaro1.mudancaPlumagem()
 passaro1.assobiar()
 
 passaro1.assobiar()
+
+cachorro1 = TamagoshiCachorro("roberto", "fralda")
+
+
+
+
+cachorro1.tedio = 100
+cachorro1.vida()  # Isso vai zerar a saúde e imprimir "Eu morri ;-;"
+print(cachorro1.saude)
+cachorro1.pegarOsso()
+print(cachorro1.fome)
