@@ -41,7 +41,7 @@ class Tamagoshi:
         self.tedio += 2.5
         self.fome += 5
 
-<<<<<<< HEAD
+
 
 
 #classe para Tamagoshi Gato
@@ -66,24 +66,12 @@ class TamagoshiGato(Tamagoshi):
         self.limpeza -= 30
         print(f"que nojeira, {self.nome} está saciando a fome com ratos podres")   
 
-=======
 
-#classe para Tamagoshi Gato
-class TamagoshiGato(Tamagoshi):
-    #atributos para Tamagoshi Gato
-    def __init__(self, nome, energia, banho):
-        super().__init__(self, nome) #puxa atributos da classe pai
-        self.energia = energia
-        self.banho = banho
-
-    #m
->>>>>>> a95d3c79530787a5ddfd3f702d42cf18a428ee90
 
 
 #classe para Tamagoshi Cachorro
 class TamagoshiCachorro(Tamagoshi):
     #atributos para Tamagoshi Cachorro
-<<<<<<< HEAD
     def __init__(self, nome, ):
         super().__init__(nome) #puxa atributos da classe pai
         self.estahDormindo = False
@@ -111,13 +99,8 @@ class TamagoshiCachorro(Tamagoshi):
 
 
 #def pegar osso
-=======
-    def __init__(self, nome, passear, treinar):
-        super().__init__(self, nome) #puxa atributos da classe pai
-        self.passear = passear
-        self.treinar = treinar
 
->>>>>>> a95d3c79530787a5ddfd3f702d42cf18a428ee90
+
 
 #classe para Tamagoshi Passaro
 class TamagoshiPassaro(Tamagoshi):
@@ -127,7 +110,7 @@ class TamagoshiPassaro(Tamagoshi):
         self.assobio = assobio 
         self.plumagem = plumagem
     
-<<<<<<< HEAD
+
     #métodos para tamagoshis pássaros
     def assobiar(self):
         print(f"O pássaro {self.nome} está assobiando! {self.assobio}")
@@ -144,19 +127,16 @@ class TamagoshiPassaro(Tamagoshi):
         else:
             print(f"{self.nome} está querendo voar mas ainda é novinho...")
         
-=======
+
     def assobiar(self):
         print(f"O pássaro {self.nome} está assobiando! {self.assobio}")
     
->>>>>>> a95d3c79530787a5ddfd3f702d42cf18a428ee90
 
 
 
 passaro1 = TamagoshiPassaro("luli", "piu piu piuuuu", "roxa")
 
-<<<<<<< HEAD
 passaro1.mudancaPlumagem()
 passaro1.assobiar()
-=======
+
 passaro1.assobiar()
->>>>>>> a95d3c79530787a5ddfd3f702d42cf18a428ee90
