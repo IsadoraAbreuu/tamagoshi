@@ -112,20 +112,23 @@ class TamagoshiCachorro(Tamagoshi):
 #classe para Tamagoshi Passaro
 class TamagoshiPassaro(Tamagoshi):
     #atributos para Tamagoshi Passaro
-    def __init__(self, nome, assobio):
+    def __init__(self, nome, assobio=None):
         super().__init__(nome) #puxa atributos da classe pai
         self.assobio = assobio 
         self.plumagem = ["azul", "rosa", "laranja", "verde", "amarelo", "roxo", "vermelho", "preto", "branco"]
 
     #métodos para tamagoshis pássaros
     def assobiar(self):
-        print(f"O pássaro {self.nome} está assobiando!")
-        time.sleep(2)
-        print(f"{self.assobio} ...")
-        time.sleep(2)
-        print(f"{self.assobio} ...")
-        time.sleep(2)
-        print(f"{self.assobio} ...")
+        if self.assobio:
+            print(f"O pássaro {self.nome} está assobiando!")
+            time.sleep(2)
+            print(f"{self.assobio} ...")
+            time.sleep(2)
+            print(f"{self.assobio} ...")
+            time.sleep(2)
+            print(f"{self.assobio} ...")
+        else:
+            print("O assobio ainda não foi definido :(")
 
     def mudancaPlumagem(self):
         sortearPlumagem =  random.choice(self.plumagem)

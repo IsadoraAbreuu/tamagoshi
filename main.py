@@ -1,6 +1,8 @@
 import time
 from tamagoshi import Tamagoshi
+from tqdm import tqdm
 from tamagoshiFilhos import TamagoshiCachorro, TamagoshiGato, TamagoshiPassaro
+from time import sleep
 
 #define cores 
 azul = "\033[94m" #cachorro
@@ -32,6 +34,7 @@ def main():
         time.sleep(2)
         print(f"Preparando o mundo para receber o {nome}...")
         time.sleep(2)
+        tempo()
         print(f"Parabéns! {rosa}{nome} acaba de chegar ao mundo Tamagoshi!{reset} 🐱🐱🐱")
         time.sleep(1)
         print(f"Vamos cuidar dele!! \n")
@@ -46,6 +49,7 @@ def main():
         time.sleep(2)
         print(f"Preparando o mundo para receber o {nome}...")
         time.sleep(2)
+        tempo()
         print(f"Parabéns! {azul}{nome} acaba de chegar ao mundo Tamagoshi!{reset} 🐶🐶🐶")
         time.sleep(1)
         print(f"Vamos cuidar dele!! \n")
@@ -60,11 +64,12 @@ def main():
         time.sleep(2)
         print(f"Preparando o mundo para receber o {nome}...")
         time.sleep(2)
+        tempo()
         print(f"Parabéns! {amarelo}{nome} acaba de chegar ao mundo Tamagoshi!{reset} 🐦🐦🐦")
         time.sleep(1)
         print(f"Vamos cuidar dele!! \n")
         time.sleep(1)
-        tamagoshi = TamagoshiPassaro(nome, tamagoshi.assobio)
+        tamagoshi = TamagoshiPassaro(nome)
     else:
         print("Opção inválida. Tente novamente")
         return
@@ -95,6 +100,7 @@ def main():
         time.sleep(2)
         print("----------------------------\n")
         if opcao == "0":
+            tempo()
             print(f"Saindo... {nome} está indo de berço")
             break
         elif opcao == "1":
@@ -129,7 +135,7 @@ def main():
                 tamagoshi.pegarOsso()
         elif isinstance(tamagoshi, TamagoshiPassaro):  
             if opcao == "4":
-                definirAssobio = input(f"Defina o assobio de {tamagoshi.nome}")  
+                definirAssobio = input(f"Defina o assobio de {tamagoshi.nome}: ")  
                 tamagoshi.assobio = definirAssobio
                 tamagoshi.assobiar()
             elif opcao == "5":
@@ -153,7 +159,13 @@ def mostrar_status(tamagoshi):
         print(f"🎒 Acessório: {tamagoshi.acessorio if hasattr(tamagoshi, 'acessorio') else 'Nenhum'}")
     elif isinstance(tamagoshi, TamagoshiPassaro):
         print(f"🐦 Tipo: {amarelo}Pássaro{reset}")
-        print(f"💨 Assobio: {tamagoshi.assobio}")
+        print(f"💨 Assobio: {tamagoshi.assobio if getattr(tamagoshi, 'assobio', None) else 'Nenhum'}")
         print(f"🌈 Plumagem: {tamagoshi.plumagem}")
 
+def tempo():
+    for i in tqdm(range(100)):
+        sleep(0.02)
+
+
 main()
+
