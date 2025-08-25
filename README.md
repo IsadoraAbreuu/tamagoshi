@@ -40,4 +40,4 @@ Mantenha seu Tamagoshi saudável, feliz e bem alimentado. Cuide dele com carinho
 
 Projeto simples feito para praticar Python com orientação a objetos e interatividade no terminal.
 <br>
-Feito por: Isadoraa Abreu
+**Feito por: Isadora Abreu**
