@@ -39,7 +39,4 @@ Mantenha seu Tamagoshi saudável, feliz e bem alimentado. Cuide dele com carinho
 ---
 
 Projeto simples feito para praticar Python com orientação a objetos e interatividade no terminal.
-
-
-Se quiser, posso personalizar com emojis diferentes, colocar instruções para rodar no VS Code, ou adicionar badges do GitHub. Deseja isso?
-```
+Feito por: Isadoraa Abreu
