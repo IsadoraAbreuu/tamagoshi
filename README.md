@@ -1,5 +1,5 @@
 
-# 🐾 Tamagoshi Virtual (Python)
+# 🐾 Tamagoshi Virtual
 
 Este é um jogo de terminal inspirado nos bichinhos virtuais Tamagotchis.  
 Você pode escolher entre um **Gato**, **Cachorro** ou **Pássaro**, dar um nome a ele e cuidar do seu pet com diversas interações.
@@ -11,11 +11,11 @@ Você pode escolher entre um **Gato**, **Cachorro** ou **Pássaro**, dar um nome
 - Usar ações específicas para cada tipo de animal
 - Ver o status completo do seu pet (fome, saúde, tédio, etc.)
 
-## 🐶 Tipos de Tamagoshi
+##  Tipos de Tamagoshi
 
-- **Gato**: pode tomar banho, comer rato e arranhar o sofá
-- **Cachorro**: pode dormir, usar acessórios e brincar de pegar osso
-- **Pássaro**: pode assobiar e mudar a plumagem
+- **Gato**: pode tomar banho, comer rato e arranhar o sofá 🐱
+- **Cachorro**: pode dormir, usar acessórios e brincar de pegar osso 🐶
+- **Pássaro**: pode assobiar e mudar a plumagem 🐦
 
 ## ▶️ Como jogar
 
